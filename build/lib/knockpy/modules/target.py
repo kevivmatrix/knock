@@ -39,6 +39,7 @@ def get(target, verbose, test):
 		if verbose and not test:
 			for item in host:
 				found.append([target, item[1], item[0], 'host'])
+				print item
 				text += str(item[1]).ljust(18) + str(item[0]) + '\n'
 
 	# Test subdomain to detect host

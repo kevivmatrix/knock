@@ -218,6 +218,8 @@ def subdomain_scan():
 
 		if result:
 			print result
+			with open('a.log', 'a') as file:
+				file.write(result + "\n")
 
 # Statistics
 def header_stats_summary():
