@@ -209,7 +209,7 @@ def get_targetlist(domain):
 def header_start_scan(domain):
 	print headers.start_scan(domain)
 
-def subdomain_scan():
+def subdomain_scan(domain):
 	for target in targetlist:
 		if wildcard_detected:
 			result = bypass_wildcard(target, wcode)
@@ -218,7 +218,7 @@ def subdomain_scan():
 
 		if result:
 			print result
-			with open('a.log', 'a') as file:
+			with open(domain + '.log', 'a') as file:
 				file.write(result + "\n")
 
 # Statistics

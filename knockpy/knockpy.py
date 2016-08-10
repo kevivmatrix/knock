@@ -56,7 +56,7 @@ def get_wordlist_targetlist(domain, path_to_worlist=False):
 def start(domain):
 	# Start
 	core.header_start_scan(domain)
-	core.subdomain_scan()
+	core.subdomain_scan(domain)
 
 def statistics():
 	# Statistics
