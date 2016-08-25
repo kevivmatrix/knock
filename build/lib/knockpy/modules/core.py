@@ -221,6 +221,9 @@ def subdomain_scan(domain):
 			with open(domain + '.log', 'a') as file:
 				file.write(result + "\n")
 
+	with open(domain + '.log', 'a') as file:
+		file.write("EOF" + "\n")
+
 # Statistics
 def header_stats_summary():
 	return headers.stats_summary()
@@ -230,7 +233,8 @@ def report():
 
 # Save result in csv
 def save_in_csv(domain):
-	print target.save_csv(domain)
+	# print target.save_csv(domain)
+	print "do not do anything"
 
 # Zone transfer
 def getzone(domain):
